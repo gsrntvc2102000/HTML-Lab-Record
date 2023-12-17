@@ -1,2 +1,18 @@
-# HTML-Lab-Record
-Web Technology Lab
+# Table of Contents
+
+1. [Web Programming Syllabus](#web-programming-syllabus)
+2. [Student Details and Result](#student-details-and-result)
+3. [Class Timetable](#class-timetable)
+4. [Moving Images with Hyperlink](#moving-images-with-hyperlink)
+5. [Aviation Content List](#aviation-content-list)
+6. [Login Page Validation](#login-page-validation)
+7. [Arithmetic Operations Calculator](#arithmetic-operations-calculator)
+8. [Count Form Elements](#count-form-elements)
+9. [Employee Information Calculator](#employee-information-calculator)
+10. [Student Result Calculator](#student-result-calculator)
+11. [Convert Text to Uppercase](#convert-text-to-uppercase)
+12. [Image Switch with MouseOver](#image-switch-with-mouseover)
+13. [Evaluate Mathematical Expression](#evaluate-mathematical-expression)
+14. [Form Input Validation](#form-input-validation)
+15. [Sum of N Natural Numbers](#sum-of-n-natural-numbers)
+16. [Factorial of N](#factorial-of-n)
