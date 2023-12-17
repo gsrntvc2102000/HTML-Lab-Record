@@ -19,9 +19,7 @@
 16. [Factorial of N](16.html)
 
 
-
-Certainly! Here is the formatted content for your GitHub Readme:
-
+The Above Table will take you to the actual code
 ---
 
 ## Lab Record - Web Technology
