@@ -2,9 +2,9 @@
 
 
 01. [Web Programming Syllabus](01%20Mysyslabus.html)
-02. [Student Details and Result](02%20Student%20Details%20and%20Result)
+02. [Student Details and Result](https://github.com/gsrntvc2102000/HTML-Lab-Record/compare/04...02)
 03. [Class Timetable](03%20Time%20Table.html)
-04. [Moving Images with Hyperlink](04%20Moving%20Images%20with%20Hyperlink)
+04. [Moving Images with Hyperlink](https://github.com/gsrntvc2102000/HTML-Lab-Record/commits/04)
 05. [Aviation Content List](05%20List.html)
 06. [Login Page Validation](06%20User%20login.html)
 07. [Arithmetic Operations Calculator](07%20Arithmetic%20Operation.html)
