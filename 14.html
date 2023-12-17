@@ -1,0 +1,81 @@
+14.⁠ ⁠Create a HTML form with 3 Textboxes. Write JavaScript code to validate input for numbers, alphabets, alphanumeric and verify that all 3 textboxes has been filled.
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Validation </title>
+<script>
+
+//Only alphabets with spaces allowed (for name)
+function alp(ele){
+	var val = ele.value;
+	var len = val.length;
+	if(val.search(/[^a-zA-Z ]/) != -1){			
+		alert("ENTER ONLY ALPHABETS");
+		ele.value = ele.value.substring(0,len-1);
+		ele.focus();
+	}
+}
+
+
+//Only alphabets and numbers without spaces( for srn)
+function alpnum(ele){
+	var val = ele.value;
+	var len = val.length;
+	if(val.search(/[^a-zA-Z0-9]/) != -1){			
+		alert("ENTER ONLY ALPHABETS OR NUMBERS");
+		ele.value = ele.value.substring(0,len-1);
+		ele.focus();
+	}
+}
+
+//Validation Function For Number Field 
+
+function num(ele){
+	var val = ele.value;
+	var len = val.length;
+	if(val.search(/[^0-9]/) != -1){			// \D is For Not A Digit search i.e [^0-9]
+		alert("ENTER ONLY NUMBERS");
+		ele.value = ele.value.substring(0,len-1);
+		ele.focus();
+		return false;
+ }
+	 return true;
+
+}
+
+function valid()
+{
+	if(document.std.srn.value=="" || document.std.sname.value=="" || document.std.mob.value==""){
+		alert("Please fill all the fields");
+	}
+	else{
+		alert("Form submitted successfully");
+	}
+	
+}
+</script>
+</head>
+<body style="background-color:yellow;color:blue;">
+<form name="std">
+<table align="center" bgcolor="lightgray">
+		<tr><th colspan="2">STUDENT RESULT</th></tr>
+		<tr>
+			<td><label>SRN</label></td>
+			<td><input type="text" name="srn" onkeyup="alpnum(this)" onkeydown="alpnum(this)"  maxlength="8" /></td>
+		</tr>
+		<tr>
+			<td><label>STUDENT NAME</label></td>
+			<td><input type="text" name="sname" onkeyup="alp(this)" onkeydown="alp(this)" /></td>
+		</tr>
+		<tr><td>CONTACT NUMBER</td>
+			<td><input type="text" name="mob" onkeyup="num(this)" onkeydown="num(this)" maxlength="10"/> </td>
+		</tr>
+		<tr>
+			<td align="center"><input type="button" value="SUBMIT" onclick="valid()" /></td>
+			<td align="center"><input type="reset" value="CLEAR" /></td>
+		</tr>
+</table>
+</form>
+</body>
+</html>

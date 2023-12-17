@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Information</title>
+  <style>
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Employee Information Form</h2>
+
+  <form name="emp">
+    <label for="basic">Basic Salary:</label>
+    <input type="number" id="basic" name="basic" required>
+    
+    <button type="button" onclick="calculate()">Calculate</button>
+
+    <label for="da">DA:</label>
+    <input type="text" id="da" name="da" readonly>
+
+    <label for="hra">HRA:</label>
+    <input type="text" id="hra" name="hra" readonly>
+
+    <label for="cca">CCA:</label>
+    <input type="text" id="cca" name="cca" readonly>
+
+    <label for="pf">PF:</label>
+    <input type="text" id="pf" name="pf" readonly>
+
+    <label for="pt">PT:</label>
+    <input type="text" id="pt" name="pt" readonly>
+
+    <label for="gp">Gross Pay:</label>
+    <input type="text" id="gp" name="gp" readonly>
+
+    <label for="np">Net Pay:</label>
+    <input type="text" id="np" name="np" readonly>
+  </form>
+
+  <script>
+    function calculate() {
+      var b, da, hra, cca, pf, pt, gp, np;
+      b = parseInt(document.emp.basic.value);
+
+      if (b >= 5000) {
+        da = 0.7 * b;
+        hra = 0.3 * b;
+        cca = 0.1 * b;
+        pf = 0.02 * b;
+        pt = 0.01 * b;
+        gp = b + da + hra + cca;
+        np = gp - (pf + pt);
+
+        document.emp.da.value = da;
+        document.emp.hra.value = hra;
+        document.emp.cca.value = cca;
+        document.emp.pf.value = pf;
+        document.emp.pt.value = pt;
+        document.emp.gp.value = gp;
+        document.emp.np.value = np;
+      } else {
+        alert("Basic salary should be 5000 or more");
+        document.emp.basic.value = "";
+        document.emp.da.value = "";
+        document.emp.hra.value = "";
+        document.emp.cca.value = "";
+        document.emp.pf.value = "";
+        document.emp.pt.value = "";
+        document.emp.gp.value = "";
+        document.emp.np.value = "";
+      }
+    }
+  </script>
+
+</body>
+</html>

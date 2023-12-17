@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Loading </title>
+<script type="text/javascript">
+function valid(ele)
+{
+	if(ele.value<0 || ele.value>100)
+		{
+			alert("enter marks between 0 to 100");
+			ele.value="";
+			ele.focus();
+		}
+		
+}
+
+
+function calculate()
+{
+	var wp,cc,total,avg,grade;
+	wp=parseInt(document.std.wp.value);
+	cc=parseInt(document.std.cc.value);
+	total=wp+cc;
+	avg=total/2;
+	document.std.tot.value=total;
+	document.std.avg.value=avg;
+	if(wp<35 || cc<35){
+		grade="Fail";
+	}
+	else if(avg>=80){
+		grade="A+";
+	}
+	else if(avg>=60){
+		grade="A";
+	}
+	else if(avg>=50){
+		grade="B";
+	}
+	else if(avg>=40){
+		grade="C";
+	}
+	else{
+		grade="Fail";
+	}
+	document.std.grade.value=grade;
+}
+</script>
+</head>
+<body style="background-color:yellow;color:blue;">
+<form name="std">
+<table align="center" bgcolor="lightgray">
+		<tr><th colspan="2">STUDENT RESULT</th></tr>
+		<tr>
+			<td><label>SRN</label></td>
+			<td><input type="text" name="srn" /></td>
+		</tr>
+		<tr>
+			<td><label>STUDENT NAME</label></td>
+			<td><input type="text" name="sname" /></td>
+		</tr>
+		<tr>
+			<td><label>DEPARTMENT</label></td>
+			<td>
+				<select name="dept" style="width:170px;height:20px;">
+					<option>SELECT</option>
+					<option>BCA</option>
+					<option>BBA</option>
+					<option>BCOM</option>
+				</select>
+			</td>
+		</tr>
+<tr><td>WP</td><td><input type="text" name="wp" onchange="valid(this)" /> </td></tr>
+<tr><td>CC</td><td><input type="text" name="cc" onchange="valid(this)" /> </td></tr>
+<tr><td>TOTAL</td><td><input type="text" name="tot" readonly="readonly" /> </td></tr>
+<tr><td>AVERAGE</td><td><input type="text" name="avg" readonly="readonly" /> </td></tr>
+<tr><td>GRADE</td><td><input type="text" name="grade" readonly="readonly" /> </td></tr>
+		
+<tr>
+<td align="center"><input type="button" value="RESULT" onclick="calculate()" /></td>
+<td align="center"><input type="reset" value="CLEAR" /></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+

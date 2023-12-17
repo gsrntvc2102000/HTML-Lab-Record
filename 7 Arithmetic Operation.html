@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CALCULATOR</title>
+<script type="text/javascript">
+	
+	function add()
+	{
+		var a,b,c;
+		a=parseInt(document.frm.num1.value);
+		b=parseInt(document.frm.num2.value);
+		c=a+b;
+		//document.write("<h1 style='color:green'>sum="+c);
+		//alert("sum= "+c);
+		document.frm.result.value=c;
+		
+	}
+	function sub()
+	{
+		var a,b,c;
+		a=parseInt(document.frm.num1.value);
+		b=parseInt(document.frm.num2.value);
+		c=a-b;
+		//alert(c);
+		document.frm.result.value=c;
+		
+	}
+	function mul()
+	{
+		var a,b,c;
+		a=parseInt(document.frm.num1.value);
+		b=parseInt(document.frm.num2.value);
+		c=a*b;
+		//alert(c);
+		document.frm.result.value=c;
+		
+	}
+	function div()
+	{
+		var a,b,c;
+		a=parseInt(document.frm.num1.value);
+		b=parseInt(document.frm.num2.value);
+		if(b!=0)
+		{
+			c=a/b;
+		}
+		else
+		{
+			c="divide by zero error";
+		}
+		//alert(c);
+		document.frm.result.value=c;
+		
+	}
+</script>
+</head>
+<body bgcolor="cyan">
+<center>
+<pre>
+
+
+</pre>
+<form name="frm" action="#">
+<font face="Arial" size="5">
+<fieldset style="width:500px;text-align:left;">
+	<legend>Arithmetic Operations</legend>
+	Enter First Number : <input type="number" name="num1" required="required" autofocus="autofocus" /> <br><br>
+	Enter Second Number : <input type="number" name="num2" required="required" /> <br><br>
+	Result  :  <input type="text" name="result" readonly="readonly" />  <br><br>
+	<input type="button" value="+" onClick="add()"/>
+	<input type="button" value="-" onClick="sub()"/>
+	<input type="button" value="x" onClick="mul()"/>
+	<input type="button" value="/" onClick="div()"/>
+</form>	
+	
+</fieldset>
+</font>
+</center>
+</body>
+</html>
